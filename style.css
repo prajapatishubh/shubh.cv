@@ -1,0 +1,251 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f5;
+    color: white; /* Set default text color to white */
+}
+
+/* Video Background */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.photo-header {
+    margin-bottom: 15px;
+}
+
+#header-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 38px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* Make CV content fully transparent */
+.cv {
+    background-color: rgba(255, 255, 255, 0.1); /* Fully transparent background */
+    padding: 30px;
+    margin: 50px auto;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Update text color for CV section */
+.cv h2 {
+    font-size: 28px;
+    color: white; /* White color for section headings */
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 12px 0;
+    font-size: 20px;
+}
+
+/* Photo Gallery with enhanced effects */
+/* Photo Gallery with enhanced effects */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+    justify-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2); /* Background behind gallery */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow around gallery */
+}
+
+.photo-item {
+    background: rgba(255, 255, 255, 0.3); /* Slightly transparent background */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    position: relative; /* Required for overlay text */
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #3f51b5;
+    transition: transform 0.4s ease, filter 0.4s ease; /* Added smooth image effect */
+    border-radius: 15px 15px 0 0;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05); /* Zoom effect */
+    filter: brightness(1.1) contrast(1.2); /* Brighten and contrast on hover */
+}
+
+.photo-item:hover {
+    transform: translateY(-10px); /* Lift more on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+}
+
+.photo-item:active {
+    transform: scale(1.1); /* Increase click effect */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Shadow reset */
+}
+
+/* Optional overlay text effect on hover */
+.photo-item:hover .photo-text {
+    opacity: 1; /* Show overlay text on hover */
+    transform: translateY(0); /* Move text to normal position */
+}
+
+.photo-text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for clarity */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s; /* Smooth show/hide animation */
+}
+
+
+/* Optional overlay text effect on hover */
+.photo-item:hover .photo-text {
+    opacity: 1; /* Show overlay text on hover */
+    transform: translateY(0); /* Move text to normal position */
+}
+
+.photo-text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for clarity */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s; /* Smooth show/hide animation */
+}
+
+/* Add subtle animations */
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.photo-item img:hover {
+    animation: zoom 1.2s ease-in-out infinite; /* Infinite subtle zoom */
+}
+
+.download-btn {
+    text-decoration: none;
+    background-color: #3f51b5;
+    color: white; /* Button text color */
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #5c6bc0;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: white; /* Icon color */
+    font-size: 30px; /* Icon size */
+    margin: 0 20px; /* Increased spacing between icons */
+    transition: transform 0.3s, color 0.3s; /* Animation effects */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+    color: #3f51b5; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cv {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #header-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
